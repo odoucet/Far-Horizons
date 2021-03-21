@@ -757,7 +757,7 @@ unload_ship:
 		print_mishap_chance (ship, temp_nampla->x, temp_nampla->y,
 			temp_nampla->z);
 
-		fprintf (report_file, "\n\n");
+		fprintf (report_file, "\n");
 
 		ship->just_jumped = TRUE;
 
@@ -777,7 +777,7 @@ unload_ship:
 		print_mishap_chance (ship, temp_nampla->x, temp_nampla->y,
 			temp_nampla->z);
 
-		fprintf (report_file, "\n\n");
+		fprintf (report_file, "\n");
 
 		ship->just_jumped = TRUE;
 	    }
@@ -803,7 +803,7 @@ unload_ship:
 		{
 		    closest_unvisited_star (ship);
 		    fprintf (report_file,
-			"\n\t\t\t; Age %d, now at %d %d %d, ",
+			"\n\t\t; Age %d, now at %d %d %d, ",
 			ship->age, ship->x, ship->y, ship->z);
 
 		    if (ship->status == IN_ORBIT)
@@ -1552,7 +1552,7 @@ int			destx, desty, destz;
 
     if (mishap_chance > 10000) mishap_chance = 10000;
 
-    fprintf (report_file, "mishap chance = %ld.%02ld%%",
+    fprintf (report_file, "mishap chance = %ld.%02ld%%\n",
 	mishap_chance/100L, mishap_chance%100L);
 }
 
