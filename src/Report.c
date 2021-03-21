@@ -1527,7 +1527,7 @@ int			destx, desty, destz;
 
     if (destx == 9999)
     {
-	fprintf (report_file, "Mishap chance = ???");
+	fprintf (report_file, "Mishap chance = ???\n");
 	return;
     }
 
